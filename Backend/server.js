@@ -2,14 +2,13 @@ require('dotenv').config()
 const express = require('express');
 const userRouter = require('./routes/user');
 const connectDatabase = require("./db");
+const path = require("path");
 const app = express();
-var path = require('path')
 var cors = require('cors');
 app.use(cors())
 connectDatabase()
 app.use(express.json());
 app.use(userRouter);
-const path = require("path");
 if(process.env.NODE_ENV === "production") {
   app.use(express.static("frontend/build"));
   app.get("/*", function(req, res) {
