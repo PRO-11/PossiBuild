@@ -27,7 +27,7 @@ exports.uploadProfile = async (req, res) => {
           url:video.secure_url
         }
       });
-    res.redirect('http://localhost:3000/allthumbnail')
+    res.redirect('https://possibuild-internship.herokuapp.com/allthumbnail')
   } catch (error) {
     console.log('Error while uploading profile image', error.message);
   }
