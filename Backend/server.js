@@ -3,6 +3,7 @@ const express = require('express');
 const userRouter = require('./routes/user');
 const connectDatabase = require("./db");
 const app = express();
+var path = require('path')
 var cors = require('cors');
 app.use(cors())
 connectDatabase()
